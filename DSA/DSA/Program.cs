@@ -1,7 +1,7 @@
 ﻿
 
 using DSA.Array;
-
+int input = 0;
 Console.WriteLine("Hello, DSA!");
 Console.WriteLine("Please select any of one");
 string programList = @"
@@ -18,12 +18,20 @@ if (string.IsNullOrEmpty(userInput))
     Console.WriteLine("Have a nice day!");
     Environment.Exit(0);
 }
-int input = Convert.ToInt32(Console.ReadLine());
+
+if(int.TryParse(userInput, out int result))
+{
+    input = result;
+}
+else
+{
+    Console.WriteLine("Oops input is not number");
+    Environment.Exit(0);
+}
 
 if (input ==0)
 {
     Console.WriteLine("Oops! not selected");
-    
     Environment.Exit(0);
 }
 

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DSA.Array;
+﻿namespace DSA.Array;
 
 public class SecondLargestFinder
 {
@@ -11,12 +7,23 @@ public class SecondLargestFinder
     public SecondLargestFinder()
     {
         Console.WriteLine("");
+        Large();
     }
-    public void large(int[] arr)
+    public void Large()
     {
-        for (int v =0; arr;)
+        int number = int.MinValue, largeNumebr = int.MinValue;
+        for (int i = 0;i<arr.Length;i++)
         {
-
+            if(arr[i] > number)
+            {
+                largeNumebr = number;
+                number = arr[i];
+            }
+            else if(arr[i] > largeNumebr && arr[i] != number)
+            {
+                largeNumebr = number;
+            }
         }
+        Console.WriteLine(largeNumebr);
     }
 }
