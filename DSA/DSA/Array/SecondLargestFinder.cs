@@ -14,7 +14,7 @@ public class SecondLargestFinder
         Console.WriteLine("Please select program");
         Console.WriteLine(@"
             1. SecondLarge
-            2. 
+            2. ZeroAtlast
 ");
         ZeroAtlast();
     }
